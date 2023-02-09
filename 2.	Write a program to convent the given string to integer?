@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class StringToInt {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter a number as a string: ");
+    String str = input.nextLine();
+    
+    int num = Integer.parseInt(str);
+    
+    System.out.println("The number as an integer: " + num);
+  }
+}
