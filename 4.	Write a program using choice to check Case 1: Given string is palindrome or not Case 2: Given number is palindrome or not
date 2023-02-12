@@ -1,0 +1,66 @@
+import java.util.*;
+public class pallindromeswitch
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+		String a,b="";
+		int n,temp=0,rem=0,rev=0;
+		int c,i,cho;
+		char ch;
+		Scanner sc=new Scanner(System.in);
+		Scanner in=new Scanner(System.in);
+		System.out.print("Enter choice 1.String 2.Number: ");
+		cho=sc.nextInt();
+		switch(cho)
+		{
+			case 1:
+				System.out.print("Enter the string: ");
+				a=in.nextLine();
+				c=a.length();
+				for(i=c-1;i>=0;i--)
+				{
+					b=b+a.charAt(i);  
+				}
+				System.out.println(b);
+				if(a.equalsIgnoreCase(b))
+				{
+					System.out.print("Palindrome");
+				}
+				else
+				{
+					System.out.print("Not Palindrome");
+				}
+				break;
+			case 2:	
+				System.out.print("N: ");
+				n=sc.nextInt();
+				temp=n;
+				while(temp!=0)
+				{
+					rem=temp%10;
+					rev=rev*10+rem;
+					temp=temp/10;
+				}
+				if(n==rev)
+				{
+					System.out.print(n+" is a pallindrome");
+				}
+				else
+				{
+					System.out.print(n+" is  not a pallindrome");
+				}
+				break;
+			default:
+				System.out.println("Enter valid choice");
+				break;
+		}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Invalid");
+			System.out.println(e);
+		}	
+	}
+}
